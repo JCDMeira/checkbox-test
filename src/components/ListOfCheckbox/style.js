@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+  margin: 200px;
+`;
+
 export const Checkbox = styled("div")`
-  margin: 200px auto;
   width: 383px;
   height: 40px;
   box-sizing: border-box;
