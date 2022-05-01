@@ -10,9 +10,9 @@ export default function ListOfCheckbox({
     if (isChecked(value)) {
       console.log("removendo", value);
 
-      const newOptionSelected = deselectOption(value);
+      const newOptionsSelected = exceptDeselectedOptions(value);
 
-      setOption(newOptionSelected);
+      setOption(newOptionsSelected);
     }
 
     if (!isChecked(value)) {
@@ -24,7 +24,7 @@ export default function ListOfCheckbox({
 
   const isChecked = (value) => initialOption.includes(value);
 
-  const deselectOption = (value) =>
+  const exceptDeselectedOptions = (value) =>
     initialOption.filter((option) => option !== value);
 
   return (
